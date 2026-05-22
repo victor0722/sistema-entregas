@@ -10,15 +10,7 @@ const authRutas = require("./routes/authRutas");
 
 const app = express();
 
-const corsOptions = {
-  origin: "https://sistema-entregas-three.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
